@@ -144,9 +144,9 @@ body,html{
 .story-section{
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  /* gap: 20px; */
   width: 100%;
-  padding: 0 24px;
+  /* padding: 0 24px; */
 }
 
 .section-1-head{
@@ -169,9 +169,17 @@ body,html{
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+  padding-inline: 24px;
 }
 
+.section-2{
+  width: 60vw;
 
+}
+.section-1{
+  width: 40vw !important ;
+
+}
 
 
 .section-1-head>h1,
@@ -186,16 +194,23 @@ body,html{
   color: #000000;
   display: inline;
 }
-
+.section-2-head>h1{
+ margin: 0;
+ margin-top: 29px;
+}
+.section-2{
+  text-align: center;
+}
 .section-1-head>h1::after,
 .section-2-head>h1::after{
-  content: '';
+  /* content: ''; */
   height: 2px;
   background-color: #6B5027;
   width: 304px;
   display: block;
-  margin: 0 auto;
+  margin: auto;
   margin-top: -6px;
+  margin-right: -500px;
 }
 
 .section-2-head>h1::after{
@@ -210,6 +225,7 @@ body,html{
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  /* width: 30vw; */
 }
 
 label>h3{
@@ -225,21 +241,22 @@ textarea,
   font-family: var(--ff-gilroy);
   margin-top: 10px;
   margin-bottom: 25px;
-  width: 422px;
-  background: #FFFFFF;
-  border: 1.5px solid #000000;
-  border-radius: 2px;
+  width: calc(35vw - 48px) !important;
+
+  /* border: 1.5px solid #000000;
+  border-radius: 2px; */
   outline: none;
   padding: 14px 16px;
-  
   font-size: 1.25em;
-  line-height: 23px;
+  /* line-height: 23px; */
   color: rgba(0, 0, 0, 0.75);
 }
 
 .choose>input{
   text-transform: uppercase;
   padding-right: 50px !important;
+  width: 100% !important;
+
 }
 
 .choose{
@@ -256,7 +273,7 @@ textarea{
 .select-btn{
   cursor: pointer;
   padding: 12px 16px;
-  width: 422px;
+  width: calc(35vw - 48px) !important;
   height: 48px;
   background: #FFFFFF;
   border: 1px solid #000000;
@@ -396,9 +413,13 @@ textarea{
 .section-2-head{
   border-bottom: 1px solid #D9D9D9;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
+  padding-bottom: 2rem;
   margin-bottom: 1rem;
+  width: 100%;
+  /* width: 60vw; */
 }
 
 
@@ -409,11 +430,17 @@ textarea{
   align-self: flex-end;
   margin-top: -4.2rem;
   margin-right: 0.5rem;
+  /* width: 35rem !important; */
 }
 
 .container{
   width: 100%;
-  height: max-content;
+  /* height: 100%; */
+  overflow-y: scroll;
+  overflow-x: auto;
+  /* flex:1; */
+  height: calc(100vh - 400px);
+  /* background-color: aqua; */
 }
 
 
@@ -451,11 +478,11 @@ textarea{
   justify-content: flex-start;
   /* overflow-x: hidden; */
   overflow-y: auto !important;
-  /* overscroll-behavior-inline: contain; */
+  overscroll-behavior-inline: contain;
   /* min-height: 425px; */
   height: 100vw;
-  background-color: blueviolet;
-  margin-bottom: 500px;
+  /* background-color: blueviolet; */
+  /* margin-bottom: 500px; */
 }
 
 
@@ -542,6 +569,14 @@ textarea{
 
 }
 
+.single-items{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 32px);
+
+}
+
 .filter{
   margin-top: -10px;
   margin-bottom: 1rem;
@@ -609,6 +644,7 @@ textarea{
     width: 100%;
     padding: 0 20px;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
 
@@ -646,7 +682,7 @@ textarea{
   .subject>input,
   textarea{
     margin-top: 5px;
-    width: 350px !important;
+    width: calc(38vw - 48px) !important;
   }
 
   .select-btn,
@@ -671,12 +707,14 @@ textarea{
   }
 
   .filter{
-    width: 555px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
   }
 
-  .item-section{
+  /* .item-section{
     width: 600px;
-  }
+  } */
 
   .item-section::after{
     width: 580px;
@@ -714,7 +752,7 @@ textarea{
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 662px) {
 
   body{
     overflow-y: auto;
@@ -783,7 +821,17 @@ textarea{
 
   .section-1{
     position: relative;
+    width: 100vw !important;
+    justify-content: center;
+    align-items: center;
   }
+  .section-2{
+    width: 100vw !important;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
 
   .section-1-head{
     gap: 1rem;
@@ -920,11 +968,17 @@ textarea{
   .middle-line{
     margin-top: -0.7rem;
     align-self: center;
-    height: 2px;
-    width: 110vw;
+    height: 0px;
+    width: 0vw;
     background-color: #000000;
     border: none;
   }
+  
+  .story-section{
+    flex-direction: column;
+
+    }
+  
 
 
   .section-2-head{
@@ -1028,8 +1082,8 @@ textarea{
     box-shadow: 1px 1px 0px #000000;
     align-items: center;
     justify-content: flex-start;
-    width: 180px;
-    height: 261.62px;
+    /* width: 180px; */
+    min-height: 261.62px;
   }
 
 
@@ -1044,16 +1098,18 @@ textarea{
     width: 150px;
     font-size: 1.125rem;
     line-height: 18px;
-    text-align: center;
+    text-align: left;
   }
-
+  .show-para{
+    width: 95%;
+  }
   .show-para>p{
     overflow-y: hidden;
     margin-top: 1rem;
-    width: 142px;
+    width: 95%;
     font-size: 0.75rem;
     line-height: 14px;
-    text-align: center;
+    text-align:left;
     align-self: center;
   }
 
@@ -1082,15 +1138,29 @@ textarea{
 
 }
 
-@media screen  and (max-width: 320px){
+@media screen  and (max-width: 425px){
   .section-1-head{
-    width: 50%;
+    /* width: 50%; */
   }
 
   .section-1-head>h1::after{
     right: -10px;
   }
 
+  .item-section{
+    width: 300px!important;
+    /* margin-right:20px ; */
+  }
+  .container{
+    gap: 20px;
+    flex-direction: column;
+  }
+  .swiper-container-3d{
+    perspective: auto;
+  }
+  .swiper-container{
+    overflow: scroll;
+  }
 
   .subject>input,
   textarea,
